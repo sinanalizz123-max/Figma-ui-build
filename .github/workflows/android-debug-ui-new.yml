@@ -1,9 +1,14 @@
 name: Android Debug Build (GitHub Only)
+
 concurrency:
   group: android-build
   cancel-in-progress: true
+
 on:
   workflow_dispatch:
+  # uncomment if you want auto build on push
+  # push:
+  #   branches: [ main ]
 
 jobs:
   build:
@@ -35,5 +40,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: NetMonitorApp-debug
+          name: debug-apk
           path: app/build/outputs/apk/debug/*.apk
