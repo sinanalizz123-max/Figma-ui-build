@@ -1,18 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#1A1A1A"
-    android:padding="12dp"
-    android:layout_marginBottom="12dp">
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="#1A1A1A">
 
     <TextView
-        android:text="SIM 1 • Carrier"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"/>
+        android:text="SIM X — Carrier"
+        android:textColor="#EDEDED"
+        android:textSize="15sp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <TextView android:text="RSRP: -95 dBm" android:textColor="#1FD655"/>
-    <TextView android:text="RSRQ: -10 dB" android:textColor="#1FD655"/>
-    <TextView android:text="SNR: 20 dB" android:textColor="#1FD655"/>
-    <TextView android:text="Band: 40 • LTE" android:textColor="#1FD655"/>
+    <include layout="@layout/item_metric"/>
+    <include layout="@layout/item_metric"/>
+    <include layout="@layout/item_metric"/>
+    <include layout="@layout/item_metric"/>
+    <include layout="@layout/item_metric"/>
+    <include layout="@layout/item_metric"/>
 </LinearLayout>
