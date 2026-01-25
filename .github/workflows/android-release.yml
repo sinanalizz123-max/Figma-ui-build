@@ -2,20 +2,24 @@ name: Android Release (No Cache)
 
 on:
   workflow_dispatch:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on:
+  workflow_dispatch:
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: 17
+          distribution:
+  workflow_dispatch:
+          java-version:
+  workflow_dispatch:
 
       - run: chmod +x gradlew
 
