@@ -6,7 +6,6 @@
         android:allowBackup="true"
         android:label="NetMonitor"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher"
         android:theme="@style/Theme.NetMonitor">
 
         <activity
@@ -19,4 +18,5 @@
         </activity>
 
     </application>
+
 </manifest>
