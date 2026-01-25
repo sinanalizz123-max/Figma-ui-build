@@ -14,65 +14,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="#1A1A1A"
             android:padding="16dp"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="12dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="SIM 1"
+                android:text="SIM 1 — Carrier"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:text="Carrier: —"
-                android:textColor="#AAAAAA"/>
-
-            <TextView
-                android:text="RSRP: —"
-                android:textColor="#410200"/>
-
-            <TextView
-                android:text="RSRQ: —"
-                android:textColor="#1FD655"/>
-
-            <TextView
-                android:text="SNR: —"
-                android:textColor="#00072D"/>
-
+            <TextView android:text="RSRP: — dBm" android:textColor="#AAAAAA"/>
+            <TextView android:text="RSRQ: — dB" android:textColor="#AAAAAA"/>
+            <TextView android:text="SNR: — dB" android:textColor="#AAAAAA"/>
+            <TextView android:text="Band: —" android:textColor="#AAAAAA"/>
+            <TextView android:text="NR State: —" android:textColor="#AAAAAA"/>
         </LinearLayout>
 
         <!-- SIM 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="#1A1A1A"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:orientation="vertical">
 
             <TextView
-                android:text="SIM 2"
+                android:text="SIM 2 — Carrier"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:text="Carrier: —"
-                android:textColor="#AAAAAA"/>
-
-            <TextView
-                android:text="RSRP: —"
-                android:textColor="#410200"/>
-
-            <TextView
-                android:text="RSRQ: —"
-                android:textColor="#1FD655"/>
-
-            <TextView
-                android:text="SNR: —"
-                android:textColor="#00072D"/>
-
+            <TextView android:text="RSRP: — dBm" android:textColor="#AAAAAA"/>
+            <TextView android:text="RSRQ: — dB" android:textColor="#AAAAAA"/>
+            <TextView android:text="SNR: — dB" android:textColor="#AAAAAA"/>
+            <TextView android:text="Band: —" android:textColor="#AAAAAA"/>
+            <TextView android:text="NR State: —" android:textColor="#AAAAAA"/>
         </LinearLayout>
 
     </LinearLayout>
