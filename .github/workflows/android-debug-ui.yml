@@ -1,5 +1,7 @@
 name: Android Debug Build (GitHub Only)
-
+concurrency:
+  group: android-build
+  cancel-in-progress: true
 on:
   workflow_dispatch:
 
