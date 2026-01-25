@@ -6,27 +6,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.netmonitor.app.databinding.FragDataBinding
 
 class DataFragment : Fragment() {
+
+    private var _binding: FragDataBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val v = inflater.inflate(R.layout.frag_data, container, false)
+        _binding = FragDataBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val list = v.findViewById<RecyclerView>(R.id.dataList)
-        list.layoutManager = LinearLayoutManager(requireContext())
-        list.adapter = DataAdapter(
-            listOf(
-                "Instagram" to "1.42 GB",
-                "YouTube" to "980 MB",
-                "Chrome" to "512 MB",
-                "WhatsApp" to "233 MB"
-            )
-        )
-        return v
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.recycler.layoutManager = LinearLayoutManager(requireContext())
+        binding.recycler.adapter = DataAdapter(mockData())
+    }
+
+    private fun mockData(): List<AppUsage> = listOf(
+        AppUsage("YouTube", "2.3 GB"),
+        AppUsage("Chrome", "1.1 GB"),
+        AppUsage("Instagram", "820 MB"),
+        AppUsage("WhatsApp", "410 MB")
+    )
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

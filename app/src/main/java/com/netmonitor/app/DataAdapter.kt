@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class DataAdapter(
-    private val items: List<Pair<String, String>>
+    private val items: List<AppUsage>
 ) : RecyclerView.Adapter<DataAdapter.VH>() {
 
     class VH(v: View) : RecyclerView.ViewHolder(v) {
@@ -15,15 +15,16 @@ class DataAdapter(
         val usage: TextView = v.findViewById(R.id.appUsage)
     }
 
-    override fun onCreateViewHolder(p: ViewGroup, t: Int): VH {
-        val v = LayoutInflater.from(p.context)
-            .inflate(R.layout.item_data_app, p, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
+        val v = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_app_usage, parent, false)
         return VH(v)
     }
 
-    override fun onBindViewHolder(h: VH, i: Int) {
-        h.name.text = items[i].first
-        h.usage.text = items[i].second
+    override fun onBindViewHolder(holder: VH, position: Int) {
+        val item = items[position]
+        holder.name.text = item.name
+        holder.usage.text = item.usage
     }
 
     override fun getItemCount() = items.size
