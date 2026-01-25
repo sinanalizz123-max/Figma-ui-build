@@ -1,0 +1,26 @@
+name: Android Release (No Cache)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - run: chmod +x gradlew
+
+      - run: ./gradlew assembleRelease --no-daemon --no-build-cache --rerun-tasks
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: NetMonitorApp-release
+          path: app/build/outputs/apk/release/*.apk
