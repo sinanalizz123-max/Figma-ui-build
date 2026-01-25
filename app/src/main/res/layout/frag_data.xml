@@ -1,58 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#121212"
-    android:padding="16dp">
-
-    <TextView
-        android:text="Data usage"
-        android:textSize="18sp"
-        android:textColor="#EDEDED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    android:background="#121212">
 
     <LinearLayout
-        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
+        <!-- Title -->
         <TextView
-            android:text="Daily"
-            android:textColor="#1FD655"
+            android:text="Data usage"
+            android:textSize="18sp"
+            android:textColor="#EDEDED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- Summary -->
+        <include layout="@layout/item_data_usage"/>
+        <include layout="@layout/item_data_usage"/>
+
+        <!-- App usage -->
         <TextView
-            android:text="  Weekly  "
-            android:textColor="#8E8E8E"
+            android:text="Apps"
+            android:textColor="#B0B0B0"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="Custom"
-            android:textColor="#8E8E8E"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <include layout="@layout/item_data_app"/>
+        <include layout="@layout/item_data_app"/>
+        <include layout="@layout/item_data_app"/>
+
     </LinearLayout>
-
-    <ScrollView
-        android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <include layout="@layout/item_app_usage"/>
-            <include layout="@layout/item_app_usage"/>
-            <include layout="@layout/item_app_usage"/>
-
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</ScrollView>

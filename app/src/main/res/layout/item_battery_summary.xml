@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/CardBase"
     android:orientation="vertical"
@@ -6,16 +5,22 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:text="Current drain"
-        android:textColor="#EDEDED"
+        android:text="Battery Drain"
+        android:textColor="#B0B0B0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:text="420 mA"
-        android:textSize="22sp"
-        android:textColor="#FF6A00"
+        android:text="Active drain: 420 mA"
+        android:textColor="#FF5F5F"
         android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Idle drain: 110 mA"
+        android:textColor="#1FD655"
+        android:layout_marginTop="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

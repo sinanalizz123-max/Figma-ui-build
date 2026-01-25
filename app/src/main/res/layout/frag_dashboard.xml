@@ -10,15 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Title -->
         <TextView
-            android:text="Network dashboard"
-            android:textColor="#EDEDED"
+            android:text="Dashboard"
             android:textSize="18sp"
-            android:layout_marginBottom="12dp"
+            android:textColor="#EDEDED"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <!-- SIM 1 -->
         <include layout="@layout/item_sim_card"/>
+
+        <!-- SIM 2 -->
         <include layout="@layout/item_sim_card"/>
 
     </LinearLayout>
