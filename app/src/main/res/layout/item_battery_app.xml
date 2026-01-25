@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginTop="10dp"
     android:padding="12dp"
-    android:background="#1A1A1A"
+    style="@style/CardRow"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">

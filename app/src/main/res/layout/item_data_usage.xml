@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="12dp"
-    android:background="#1A1A1A"
+    style="@style/CardBase"
     android:layout_marginBottom="8dp">
 
     <View
