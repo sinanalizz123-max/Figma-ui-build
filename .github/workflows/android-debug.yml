@@ -1,0 +1,36 @@
+name: Android Debug (UI Test)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Clean caches
+        run: |
+          rm -rf ~/.gradle
+          rm -rf ~/.android
+          rm -rf app/build
+          rm -rf build
+
+      - name: Grant execute permission
+        run: chmod +x gradlew
+
+      - name: Build DEBUG APK
+        run: ./gradlew assembleDebug --no-daemon --no-build-cache --rerun-tasks
+
+      - name: Upload DEBUG APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NetMonitorApp-Debug
+          path: app/build/outputs/apk/debug/*.apk
