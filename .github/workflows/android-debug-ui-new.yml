@@ -1,14 +1,14 @@
-name: Generate Gradle Wrapper (GitHub Only)
+name: Android Debug Build (CI Only)
 
 on:
   workflow_dispatch:
 
 jobs:
-  generate-wrapper:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -17,13 +17,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Generate Gradle Wrapper
-        run: gradle wrapper --gradle-version 7.6.4
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      - name: Commit Gradle Wrapper
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add gradlew gradlew.bat gradle/wrapper
-          git commit -m "Add Gradle wrapper (generated on GitHub Actions)"
-          git push
+      - name: Build DEBUG APK
+        run: ./gradlew assembleDebug --no-daemon --no-build-cache
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/*.apk
