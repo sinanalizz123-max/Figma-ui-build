@@ -17,14 +17,21 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: CI sanity check (print files)
+        run: |
+          echo "PWD:"
+          pwd
+          echo "ROOT FILES:"
+          ls -la
+          echo "GRADLE DIR:"
+          ls -la gradle || true
+          echo "WRAPPER DIR:"
+          ls -la gradle/wrapper || true
+          echo "WRAPPER JAR INFO:"
+          file gradle/wrapper/gradle-wrapper.jar || true
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build DEBUG APK
         run: ./gradlew assembleDebug --no-daemon --no-build-cache
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug-apk
-          path: app/build/outputs/apk/debug/*.apk
