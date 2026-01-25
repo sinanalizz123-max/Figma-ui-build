@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:background="@android:color/transparent">
+
+    <TextView android:text="RSRP" android:textColor="#1FD655"/>
+    <TextView android:text="RSRQ" android:textColor="#1FD655"/>
+    <TextView android:text="SNR" android:textColor="#1FD655"/>
+    <TextView android:text="PCI" android:textColor="#1FD655"/>
+    <TextView android:text="Band" android:textColor="#1FD655"/>
+    <TextView android:text="NR State" android:textColor="#1FD655"/>
+
+</LinearLayout>

@@ -11,47 +11,23 @@
         android:padding="16dp">
 
         <!-- SIM 1 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#1A1A1A"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp"
-            android:orientation="vertical">
+        <TextView
+            android:text="SIM 1"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:paddingBottom="8dp"/>
 
-            <TextView
-                android:text="SIM 1 — Carrier"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView android:text="RSRP: — dBm" android:textColor="#AAAAAA"/>
-            <TextView android:text="RSRQ: — dB" android:textColor="#AAAAAA"/>
-            <TextView android:text="SNR: — dB" android:textColor="#AAAAAA"/>
-            <TextView android:text="Band: —" android:textColor="#AAAAAA"/>
-            <TextView android:text="NR State: —" android:textColor="#AAAAAA"/>
-        </LinearLayout>
+        <include layout="@layout/item_metric"/>
 
         <!-- SIM 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#1A1A1A"
-            android:padding="16dp"
-            android:orientation="vertical">
+        <TextView
+            android:text="SIM 2"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
 
-            <TextView
-                android:text="SIM 2 — Carrier"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView android:text="RSRP: — dBm" android:textColor="#AAAAAA"/>
-            <TextView android:text="RSRQ: — dB" android:textColor="#AAAAAA"/>
-            <TextView android:text="SNR: — dB" android:textColor="#AAAAAA"/>
-            <TextView android:text="Band: —" android:textColor="#AAAAAA"/>
-            <TextView android:text="NR State: —" android:textColor="#AAAAAA"/>
-        </LinearLayout>
+        <include layout="@layout/item_metric"/>
 
     </LinearLayout>
 </ScrollView>
