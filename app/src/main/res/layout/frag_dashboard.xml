@@ -18,8 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <include layout="@layout/item_sim_card"/>
-        <include layout="@layout/item_sim_card"/>
+        <include layout="@layout/item_sim_signal"/>
+        <include layout="@layout/item_sim_signal"/>
 
     </LinearLayout>
 </ScrollView>
