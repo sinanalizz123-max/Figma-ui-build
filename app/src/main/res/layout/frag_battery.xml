@@ -11,16 +11,17 @@
         android:padding="16dp">
 
         <TextView
-            android:text="Battery analytics"
+            android:text="Battery drain"
             android:textColor="#EDEDED"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:layout_marginBottom="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <include layout="@layout/item_battery_metric"/>
-        <include layout="@layout/item_battery_metric"/>
-        <include layout="@layout/item_battery_metric"/>
+        <include layout="@layout/item_battery_drain"/>
+        <include layout="@layout/item_battery_drain"/>
+        <include layout="@layout/item_battery_drain"/>
+        <include layout="@layout/item_battery_drain"/>
 
     </LinearLayout>
 </ScrollView>
