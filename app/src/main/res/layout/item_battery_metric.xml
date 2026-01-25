@@ -5,11 +5,12 @@
     android:orientation="horizontal"
     android:padding="12dp"
     android:background="#1A1A1A"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:text="Metric"
         android:textColor="#EDEDED"
+        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"/>
@@ -17,6 +18,7 @@
     <TextView
         android:text="--"
         android:textColor="#1FD655"
+        android:textSize="14sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
