@@ -5,6 +5,13 @@
     android:background="#121212">
 
     <LinearLayout
+    <TextView
+        android:id="@+id/txtSignalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-95 dBm"
+        android:textSize="18sp"
+        android:textColor="@color/signal_level"/>
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -13,7 +20,7 @@
         <!-- SIM 1 -->
         <TextView
             android:text="SIM 1"
-            android:textColor="#EDEDED"
+            android:textColor="@color/signal_level"
             android:textSize="18sp"
             android:paddingBottom="8dp"/>
 
@@ -22,7 +29,7 @@
         <!-- SIM 2 -->
         <TextView
             android:text="SIM 2"
-            android:textColor="#EDEDED"
+            android:textColor="@color/signal_level"
             android:textSize="18sp"
             android:paddingTop="16dp"
             android:paddingBottom="8dp"/>
@@ -30,4 +37,11 @@
         <include layout="@layout/item_metric"/>
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/txtSignalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-95 dBm"
+        android:textSize="18sp"
+        android:textColor="@color/signal_level"/>
 </ScrollView>

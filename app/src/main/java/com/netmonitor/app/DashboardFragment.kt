@@ -10,6 +10,11 @@ import androidx.fragment.app.Fragment
 class DashboardFragment : Fragment() {
 
     override fun onCreateView(
+        // UI-only signal simulation
+        val signal = v.findViewById<View>(R.id.txtSignalValue)
+        signal?.isActivated = true  // medium
+        // signal?.isSelected = true // strong
+
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
