@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- SIM 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A1A1A"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:text="SIM 1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:text="Carrier: —"
+                android:textColor="#AAAAAA"/>
+
+            <TextView
+                android:text="RSRP: —"
+                android:textColor="#410200"/>
+
+            <TextView
+                android:text="RSRQ: —"
+                android:textColor="#1FD655"/>
+
+            <TextView
+                android:text="SNR: —"
+                android:textColor="#00072D"/>
+
+        </LinearLayout>
+
+        <!-- SIM 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A1A1A"
+            android:padding="16dp">
+
+            <TextView
+                android:text="SIM 2"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:text="Carrier: —"
+                android:textColor="#AAAAAA"/>
+
+            <TextView
+                android:text="RSRP: —"
+                android:textColor="#410200"/>
+
+            <TextView
+                android:text="RSRQ: —"
+                android:textColor="#1FD655"/>
+
+            <TextView
+                android:text="SNR: —"
+                android:textColor="#00072D"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
