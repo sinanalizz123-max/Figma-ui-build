@@ -1,4 +1,4 @@
-name: Android Debug Build (CI Only)
+name: Android Debug Build (Fast CI)
 
 on:
   workflow_dispatch:
@@ -17,21 +17,18 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: CI sanity check (print files)
-        run: |
-          echo "PWD:"
-          pwd
-          echo "ROOT FILES:"
-          ls -la
-          echo "GRADLE DIR:"
-          ls -la gradle || true
-          echo "WRAPPER DIR:"
-          ls -la gradle/wrapper || true
-          echo "WRAPPER JAR INFO:"
-          file gradle/wrapper/gradle-wrapper.jar || true
+      # 🚀 Gradle cache (BIG speed-up)
+      - name: Enable Gradle cache
+        uses: gradle/gradle-build-action@v3
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build DEBUG APK
-        run: ./gradlew assembleDebug --no-daemon --no-build-cache
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/*.apk
