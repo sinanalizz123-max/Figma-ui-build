@@ -5,20 +5,20 @@
     android:orientation="vertical"
     android:padding="14dp"
     android:background="#1A1A1A"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="12dp">
 
     <TextView
-        android:text="SIM 1"
+        android:text="SIM 1 — Carrier"
         android:textColor="#EDEDED"
         android:textSize="16sp"
         android:layout_marginBottom="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <include layout="@layout/item_sim_metric"/>
-    <include layout="@layout/item_sim_metric"/>
-    <include layout="@layout/item_sim_metric"/>
-    <include layout="@layout/item_sim_metric"/>
-    <include layout="@layout/item_sim_metric"/>
+    <include layout="@layout/item_signal_metric"/>
+    <include layout="@layout/item_signal_metric"/>
+    <include layout="@layout/item_signal_metric"/>
+    <include layout="@layout/item_signal_metric"/>
+    <include layout="@layout/item_signal_metric"/>
 
 </LinearLayout>
