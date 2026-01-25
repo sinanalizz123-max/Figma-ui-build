@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1A1A1A"
+    android:padding="12dp"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:text="SIM 1 • Carrier"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"/>
+
+    <TextView android:text="RSRP: -95 dBm" android:textColor="#1FD655"/>
+    <TextView android:text="RSRQ: -10 dB" android:textColor="#1FD655"/>
+    <TextView android:text="SNR: 20 dB" android:textColor="#1FD655"/>
+    <TextView android:text="Band: 40 • LTE" android:textColor="#1FD655"/>
+</LinearLayout>
