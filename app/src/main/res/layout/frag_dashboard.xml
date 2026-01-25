@@ -10,6 +10,14 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <TextView
+            android:text="Dashboard"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
         <include layout="@layout/item_sim_card"/>
         <include layout="@layout/item_sim_card"/>
 
