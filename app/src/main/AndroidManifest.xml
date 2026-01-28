@@ -3,6 +3,7 @@
     package="com.netmonitor.app">
 
     <application
+        android:name=".NetMonitorApp"
         android:allowBackup="true"
         android:label="NetMonitor"
         android:icon="@mipmap/ic_launcher"
