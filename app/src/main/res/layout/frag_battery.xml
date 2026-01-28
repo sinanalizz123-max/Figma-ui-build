@@ -37,7 +37,7 @@
             android:layout_marginBottom="20dp"/>
 
         <!-- App usage list -->
-        <RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerBatteryApps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

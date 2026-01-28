@@ -47,7 +47,7 @@
 
             <include layout="@layout/item_sim_header"/>
 
-            <RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerSim1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
 
             <include layout="@layout/item_sim_header"/>
 
-            <RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerSim2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
