@@ -4,6 +4,20 @@ plugins {
 }
 
 android {
+    kotlinOptions {
+
+        jvmTarget = "17"
+
+    }
+
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_17
+
+        targetCompatibility JavaVersion.VERSION_17
+
+    }
+
     namespace "com.netmonitor.app"
     compileSdk 34
 
@@ -35,10 +49,6 @@ buildFeatures {
 
 }
 
-    kotlinOptions { jvmTarget = "17" }
-}
-
-dependencies {
     implementation "com.google.android.material:material:1.12.0"
 }
 
