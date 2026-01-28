@@ -10,14 +10,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        return
 
         if (savedInstanceState == null) {
+            loadFragment(DashboardFragment())
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
+                R.id.dashboard -> loadFragment(DashboardFragment())
                 R.id.data -> loadFragment(DataFragment())
                 R.id.battery -> loadFragment(BatteryFragment())
                 R.id.settings -> loadFragment(SettingsFragment())
