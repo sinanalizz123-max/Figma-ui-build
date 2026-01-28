@@ -2,7 +2,7 @@ name: Android Debug Build (Auto)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "ui-figma-rebuild" ]
 
 jobs:
   build:
