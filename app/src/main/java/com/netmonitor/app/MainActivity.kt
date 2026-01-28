@@ -2,8 +2,7 @@ package com.netmonitor.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -12,11 +11,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        val navController = navHostFragment.navController
+        if (savedInstanceState == null) {
+            loadFragment(DashboardFragment())
+        }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.setupWithNavController(navController)
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.dashboard -> loadFragment(DashboardFragment())
+                R.id.data -> loadFragment(DataFragment())
+                R.id.battery -> loadFragment(BatteryFragment())
+                R.id.settings -> loadFragment(SettingsFragment())
+            }
+            true
+        }
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
     }
 }
