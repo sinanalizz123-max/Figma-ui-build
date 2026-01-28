@@ -4,6 +4,18 @@ plugins {
 }
 
 android {
+    sourceSets {
+
+        main.java.srcDirs -= "build/generated/data_binding_base_class_source_out"
+
+    }
+
+    dataBinding {
+
+        enabled = false
+
+    }
+
     namespace "com.netmonitor.app"
     compileSdk 34
 
