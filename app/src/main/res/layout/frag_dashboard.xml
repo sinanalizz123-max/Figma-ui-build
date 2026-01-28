@@ -30,21 +30,47 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="Network"
                 android:textSize="18sp"
-                android:layout_marginStart="8dp"
                 android:textColor="@color/text_primary"/>
         </LinearLayout>
 
-        <!-- SIM 1 -->
-        <include
-            android:id="@+id/sim1Card"
-            layout="@layout/item_sim_card"/>
+        <!-- SIM 1 CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_round"
+            android:padding="16dp">
 
-        <!-- SIM 2 -->
-        <include
-            android:id="@+id/sim2Card"
-            layout="@layout/item_sim_card"/>
+            <include layout="@layout/item_sim_header"/>
+
+            <RecyclerView
+                android:id="@+id/recyclerSim1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+
+        <!-- SIM 2 CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_round"
+            android:padding="16dp">
+
+            <include layout="@layout/item_sim_header"/>
+
+            <RecyclerView
+                android:id="@+id/recyclerSim2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
