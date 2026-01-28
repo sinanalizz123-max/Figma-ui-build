@@ -2,34 +2,44 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212">
+    android:padding="16dp">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Battery Percentage -->
+        <TextView
+            android:id="@+id/txtBatteryPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78%"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#EDEDED"/>
 
         <TextView
-            android:text="Battery"
-            android:textSize="18sp"
-            android:textColor="#EDEDED"
+            android:id="@+id/txtBatteryStatus"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charging • 1.2A"
+            android:textSize="14sp"
+            android:textColor="#9E9E9E"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Usage graph placeholder -->
+        <View
+            android:id="@+id/batteryGraph"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#1A1A1A"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- App usage list -->
+        <RecyclerView
+            android:id="@+id/recyclerBatteryApps"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-        <include layout="@layout/item_battery_card"/>
-        <include layout="@layout/item_battery_card"/>
-
-        <TextView
-            android:text="Apps"
-            android:textColor="#B0B0B0"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <include layout="@layout/item_battery_app"/>
-        <include layout="@layout/item_battery_app"/>
-        <include layout="@layout/item_battery_app"/>
-
     </LinearLayout>
 </ScrollView>

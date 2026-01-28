@@ -2,27 +2,49 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212">
+    android:fillViewport="true">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="96dp">
 
-        <!-- Title -->
-        <TextView
-            android:text="Dashboard"
-            android:textSize="18sp"
-            android:textColor="#EDEDED"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_signal"
+                android:tint="@color/text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
 
         <!-- SIM 1 -->
-        <include layout="@layout/item_sim_card"/>
+        <include
+            android:id="@+id/sim1Card"
+            layout="@layout/item_sim_card"/>
 
         <!-- SIM 2 -->
-        <include layout="@layout/item_sim_card"/>
+        <include
+            android:id="@+id/sim2Card"
+            layout="@layout/item_sim_card"/>
 
     </LinearLayout>
 </ScrollView>

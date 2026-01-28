@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/CardRow"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:gravity="center_vertical">
 
+    <!-- Left label -->
     <TextView
-        android:text="RSRP"
-        android:textColor="#EDEDED"
+        android:id="@+id/txtLabel"
+        android:textColor="#CAC4D0"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_height="wrap_content"/>
+        android:text="Signal Strength (RSRP)"
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:alpha="0.65"/>
 
-    <TextView
-        android:text="-92 dBm"
-        android:textColor="#1FD655"
+    <!-- Right value + arrow -->
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Trend icon (optional) -->
+        <ImageView
+            android:id="@+id/imgTrend"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            android:tint="@color/status_good"/>
+
+        <TextView
+            android:id="@+id/txtValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/status_good"
+        android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
 
 </LinearLayout>

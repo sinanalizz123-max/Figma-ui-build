@@ -1,38 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textSize="18sp"
+        android:textColor="#EDEDED"
+        android:layout_marginBottom="12dp"/>
+
+    <RecyclerView
+        android:id="@+id/recyclerData"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!-- Title -->
-        <TextView
-            android:text="Data usage"
-            android:textSize="18sp"
-            android:textColor="#EDEDED"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <!-- Summary -->
-        <include layout="@layout/item_data_usage"/>
-        <include layout="@layout/item_data_usage"/>
-
-        <!-- App usage -->
-        <TextView
-            android:text="Apps"
-            android:textColor="#B0B0B0"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <include layout="@layout/item_data_app"/>
-        <include layout="@layout/item_data_app"/>
-        <include layout="@layout/item_data_app"/>
-
-    </LinearLayout>
-</ScrollView>
+        android:layout_height="match_parent"/>
+</LinearLayout>
