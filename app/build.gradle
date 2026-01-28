@@ -6,9 +6,11 @@ plugins {
 android {
     buildFeatures {
 
-        dataBinding = false
+        dataBinding false
 
-        viewBinding = true
+        viewBinding true
+
+    }
 
     }
 
