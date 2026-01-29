@@ -23,12 +23,14 @@ class SettingsFragment : Fragment() {
             AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
 
         darkToggle.setOnCheckedChangeListener { _, isChecked ->
-            darkToggle.post { AppCompatDelegate.setDefaultNightMode(
-                if (isChecked)
-                    AppCompatDelegate.MODE_NIGHT_YES
-                else
-                    AppCompatDelegate.MODE_NIGHT_NO
-            )
+            darkToggle.post {
+                AppCompatDelegate.setDefaultNightMode(
+                    if (isChecked)
+                        AppCompatDelegate.MODE_NIGHT_YES
+                    else
+                        AppCompatDelegate.MODE_NIGHT_NO
+                )
+            }
         }
 
         return v
